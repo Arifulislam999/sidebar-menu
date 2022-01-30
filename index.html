@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Side menu</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-box">
+            <img src="./logo_ccexpress.png" alt="" />
+            <div class="nav-logo">
+                <ul id="ul">
+                    <li id="li"><a href="#">Home</a></li>
+                    <li id="li"><a href="#">About</a></li>
+                    <li id="li"><a href="#">Menu</a></li>
+                    <li id="li"><a href="#">Services</a></li>
+                    <li id="li"><a href="#">Cantact us</a></li>
+                    <li id="li"><a href="#">Overview</a></li>
+                </ul>
+            </div>
+            <div class="bar-logo">
+                <div id="bs">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Cantact us</a></li>
+                    <li><a href="#">Overview</a></li>
+                </ul>
+            </nav>
+            <div class="bar">
+                <div id="ba">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    let bar = document.querySelector(".bar");
+    let nav = document.querySelector(".box");
+    let bar_logo = document.querySelector(".bar-logo");
+    nav.style.transform = "translate(-270px)";
+    bar.addEventListener("click", () => {
+        nav.style.transform = "translate(-270px)";
+        bar_logo.style.display = "inline";
+    });
+    bar_logo.addEventListener("click", () => {
+        nav.style.transform = "translate(0px)";
+        bar_logo.style.display = "none";
+    });
+</script>
+
+</html>
